@@ -1,0 +1,8 @@
+.inpbar{
+    width: 600px;
+    height: 60px;
+    margin: 20px 0;
+    text-align: center;
+    border: 0px; 
+    font-size: large;             
+}
