@@ -23,7 +23,7 @@ export default function Home() {
         if (bottom) {
             setTimeout(() => {
                 if (page<6)
-                setPage((p) => p + 1);
+                setPage(page+1);
             }, 2000);
         }
     };
