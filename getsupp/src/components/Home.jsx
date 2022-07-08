@@ -40,7 +40,7 @@ export default function Home() {
       >
         {Data &&
           Data.filter((e) => e.name.includes(searchitem)).map((ele) => (
-            <UserCard value={ele}></UserCard>
+            <UserCard key={ele.id} value={ele}></UserCard>
           ))}{
                page<6?<h3>Loading...</h3>:<h3>End</h3>   
           }
