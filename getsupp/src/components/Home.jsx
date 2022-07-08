@@ -21,8 +21,10 @@ export default function Home() {
         console.log(1);
         const bottom = e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop < 50;
         if (bottom) {
-            if (page<6)
-            setPage((p) => p + 1);
+            setTimeout(() => {
+                if (page<6)
+                setPage((p) => p + 1);
+            }, 2000);
         }
     };
   return (
@@ -35,14 +37,13 @@ export default function Home() {
             width: "600px",
             height: "100%"      
               }}
-              
-
-
       >
         {Data &&
           Data.filter((e) => e.name.includes(searchitem)).map((ele) => (
             <UserCard value={ele}></UserCard>
-          ))}
+          ))}{
+               page<6?<h3>Loading...</h3>:<h3>End</h3>   
+          }
       </Stack>
     </div>
   );
